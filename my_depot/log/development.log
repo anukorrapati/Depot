@@ -1,0 +1,1502 @@
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (134.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (33.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111011031452)
+  [1m[35m (0.4ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111011031452')[0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111011031452)
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+
+
+Started GET "/my_depot" for 127.0.0.1 at 2011-10-10 21:55:11 -0600
+
+ActionController::RoutingError (No route matches [GET] "/my_depot"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (132.1ms)
+
+
+Started GET "/Depot" for 127.0.0.1 at 2011-10-10 21:56:47 -0600
+
+ActionController::RoutingError (No route matches [GET] "/Depot"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (17.2ms)
+
+
+Started GET "/my_depot" for 127.0.0.1 at 2011-10-10 21:56:55 -0600
+
+ActionController::RoutingError (No route matches [GET] "/my_depot"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2011-10-10 21:57:58 -0600
+Served asset /rails.png - 200 OK (38ms)
+
+
+Started GET "/Products" for 127.0.0.1 at 2011-10-10 21:58:09 -0600
+
+ActionController::RoutingError (No route matches [GET] "/Products"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (76.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-10-10 21:58:19 -0600
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (2.9ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (4.6ms)
+Compiled application.css  (8ms)  (pid 13290)
+Compiled products.css  (13ms)  (pid 13290)
+Compiled scaffolds.css  (44ms)  (pid 13290)
+Compiled application.js  (30ms)  (pid 13290)
+Compiled jquery.js  (16ms)  (pid 13290)
+Compiled jquery_ujs.js  (1ms)  (pid 13290)
+Compiled products.js  (761ms)  (pid 13290)
+Completed 200 OK in 1093ms (Views: 1079.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 21:58:21 -0600
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-10 21:58:21 -0600
+Served asset /scaffolds.css - 200 OK (243ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 21:58:21 -0600
+Served asset /jquery.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2011-10-10 21:58:22 -0600
+Served asset /products.css - 200 OK (66ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 21:58:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2011-10-10 21:58:22 -0600
+Served asset /products.js - 200 OK (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 21:58:22 -0600
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-10-10 21:58:40 -0600
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (200.7ms)
+Rendered products/new.html.erb within layouts/application (297.9ms)
+Completed 200 OK in 312ms (Views: 297.3ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 21:58:41 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2011-10-10 21:58:41 -0600
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 21:58:41 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 21:58:41 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2011-10-10 21:58:41 -0600
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 21:58:41 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-10 21:58:41 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-10-10 22:01:37 -0600
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (70.7ms)
+Rendered products/new.html.erb within layouts/application (71.8ms)
+Completed 200 OK in 148ms (Views: 131.8ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 22:01:37 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2011-10-10 22:01:37 -0600
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 22:01:37 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2011-10-10 22:01:37 -0600
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-10 22:01:37 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 22:01:37 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 22:01:37 -0600
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-10-10 22:07:01 -0600
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RZDUeskIXeaRnQfSpCtFKNCuUG51i2PEIkVZuLKtnzo=", "product"=>{"title"=>"Ruby On Rails", "description"=>"Ruby on Rails was extracted by David Heinemeier Hansson from his work on Basecamp, a project management tool by 37signals (now a web application company).[9] Hansson first released Ruby on Rails as open source in July 2004, but did not share commit rights to the project until February 2005.[10] In August 2006 the framework reached a milestone when Apple announced that it would ship Ruby on Rails with Mac OS X v10.5 \"Leopard\",[11] which was released in October 2007.\r\n\r\n", "image_url"=>"/images/rails.jpg", "price"=>"50.00"}, "commit"=>"Create Product"}
+  [1m[35mSQL (98.1ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 11 Oct 2011 04:07:01 UTC +00:00], ["description", "Ruby on Rails was extracted by David Heinemeier Hansson from his work on Basecamp, a project management tool by 37signals (now a web application company).[9] Hansson first released Ruby on Rails as open source in July 2004, but did not share commit rights to the project until February 2005.[10] In August 2006 the framework reached a milestone when Apple announced that it would ship Ruby on Rails with Mac OS X v10.5 \"Leopard\",[11] which was released in October 2007.\r\n\r\n"], ["image_url", "/images/rails.jpg"], ["price", #<BigDecimal:45ad300,'0.5E2',9(18)>], ["title", "Ruby On Rails"], ["updated_at", Tue, 11 Oct 2011 04:07:01 UTC +00:00]]
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 289ms
+
+
+Started GET "/products/1" for 127.0.0.1 at 2011-10-10 22:07:01 -0600
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered products/show.html.erb within layouts/application (98.6ms)
+Completed 200 OK in 171ms (Views: 163.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 22:07:02 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2011-10-10 22:07:02 -0600
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2011-10-10 22:07:02 -0600
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 22:07:02 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-10 22:07:02 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 22:07:02 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 22:07:02 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (135.4ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (27.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (36.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (27.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111011031452')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111011031452)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (94.4ms)[0m  DELETE FROM "products"
+  [1m[36mSQL (70.6ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 11 Oct 2011 04:13:18 UTC +00:00], ["description", "<p>\n        <em>Web Design for Developers</em> will show you how to make your\n        web-based application look professionally designed. We'll help you\n        learn how to pick the right colors and fonts, avoid costly interface\n        and accessibility mistakes -- your application will really come alive.\n        We'll also walk you through some common Photoshop and CSS techniques\n        and work through a web site redesign, taking a new design from concept\n        all the way to implementation.\n      </p>"], ["image_url", "/images/wd4d.jpg"], ["price", #<BigDecimal:2f7ed18,'0.4295E2',18(18)>], ["title", "Web Design for Developers"], ["updated_at", Tue, 11 Oct 2011 04:13:18 UTC +00:00]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 11 Oct 2011 04:13:18 UTC +00:00], ["description", "<p>\n        Ruby is the fastest growing and most exciting dynamic language\n        out there. If you need to get working programs delivered fast,\n        you should add Ruby to your toolbox.\n      </p>"], ["image_url", "/images/ruby.jpg"], ["price", #<BigDecimal:2a7ebb0,'0.495E2',18(18)>], ["title", "Programming Ruby 1.9"], ["updated_at", Tue, 11 Oct 2011 04:13:18 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 11 Oct 2011 04:13:18 UTC +00:00], ["description", "<p>\n        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing\n        Rails applications, covering Test-Driven Development from both a\n        theoretical perspective (why to test) and from a practical perspective\n        (how to test effectively). It covers the core Rails testing tools and\n        procedures for Rails 2 and Rails 3, and introduces popular add-ons,\n        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.\n      </p>"], ["image_url", "/images/rtp.jpg"], ["price", #<BigDecimal:28e3030,'0.4375E2',18(18)>], ["title", "Rails Test Prescriptions"], ["updated_at", Tue, 11 Oct 2011 04:13:18 UTC +00:00]]
+
+
+Started GET "/products" for 127.0.0.1 at 2011-10-10 22:27:11 -0600
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (548.4ms)
+Completed 200 OK in 727ms (Views: 716.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:27:16 -0600
+Served asset /all.css - 404 Not Found (20ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:27:16 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/images/ruby.jpg" for 127.0.0.1 at 2011-10-10 22:27:16 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/ruby.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:27:16 -0600
+Served asset /defaults.js - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (19.8ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:27:16 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:27:16 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.6ms)
+
+
+Started GET "/images/ruby.jpg" for 127.0.0.1 at 2011-10-10 22:27:16 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/ruby.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:27:17 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (25.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-10-10 22:28:46 -0600
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Rendered products/index.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 169ms (Views: 160.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:28:51 -0600
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.2ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:28:51 -0600
+Served asset /defaults.js - 404 Not Found (24ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:28:52 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:28:52 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.8ms)
+
+
+Started GET "/images/ruby.jpg" for 127.0.0.1 at 2011-10-10 22:28:52 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/ruby.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:28:52 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-10-10 22:28:57 -0600
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (160.0ms)
+Completed 200 OK in 207ms (Views: 201.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:28:58 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:28:58 -0600
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:28:58 -0600
+Served asset /all.css - 404 Not Found (17ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:28:58 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/ruby.jpg" for 127.0.0.1 at 2011-10-10 22:28:58 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/ruby.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:28:58 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2011-10-10 22:29:33 -0600
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered products/show.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 72ms (Views: 68.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2011-10-10 22:29:38 -0600
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered products/show.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 39ms (Views: 33.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:29:39 -0600
+Served asset /all.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:29:39 -0600
+Served asset /defaults.js - 404 Not Found (38ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-10-10 22:32:23 -0600
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Rendered products/index.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 196ms (Views: 194.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:32:24 -0600
+Served asset /all.css - 404 Not Found (20ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:32:24 -0600
+Served asset /defaults.js - 404 Not Found (27ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:32:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/ruby.jpg" for 127.0.0.1 at 2011-10-10 22:32:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/ruby.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:32:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.3ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:32:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (20.3ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:32:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/images/ruby.jpg" for 127.0.0.1 at 2011-10-10 22:32:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/ruby.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-10-10 22:33:32 -0600
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (471.8ms)
+Completed 200 OK in 693ms (Views: 690.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:33:36 -0600
+Served asset /all.css - 404 Not Found (81ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:33:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (36.7ms)
+
+
+Started GET "/images/ruby.jpg" for 127.0.0.1 at 2011-10-10 22:33:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/ruby.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:33:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:33:37 -0600
+Served asset /defaults.js - 404 Not Found (31ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:33:37 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/ruby.jpg" for 127.0.0.1 at 2011-10-10 22:33:37 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/ruby.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:33:37 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2011-10-10 22:35:01 -0600
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (8.7ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "3"]]
+Rendered products/show.html.erb within layouts/application (107.2ms)
+Completed 200 OK in 145ms (Views: 121.7ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:35:07 -0600
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:35:07 -0600
+Served asset /defaults.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2011-10-10 22:35:41 -0600
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Rendered products/show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 61ms (Views: 55.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:35:42 -0600
+Served asset /all.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:35:42 -0600
+Served asset /defaults.js - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-10-10 22:35:49 -0600
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Rendered products/index.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 94ms (Views: 91.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:35:49 -0600
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:35:50 -0600
+Served asset /defaults.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (19.7ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:35:50 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/images/ruby.jpg" for 127.0.0.1 at 2011-10-10 22:35:50 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/ruby.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:35:50 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (27.1ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:35:50 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2011-10-10 22:35:53 -0600
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Rendered products/show.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 291ms (Views: 275.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:35:54 -0600
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:35:54 -0600
+Served asset /defaults.js - 404 Not Found (44ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/products/3/edit" for 127.0.0.1 at 2011-10-10 22:36:12 -0600
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "3"]]
+Rendered products/_form.html.erb (45.0ms)
+Rendered products/edit.html.erb within layouts/application (96.7ms)
+Completed 200 OK in 138ms (Views: 129.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:36:12 -0600
+Served asset /all.css - 404 Not Found (18ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:36:12 -0600
+Served asset /defaults.js - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started PUT "/products/3" for 127.0.0.1 at 2011-10-10 22:36:22 -0600
+  Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RZDUeskIXeaRnQfSpCtFKNCuUG51i2PEIkVZuLKtnzo=", "product"=>{"title"=>"Programming Ruby 1.9", "description"=>"<p>\r\n        Ruby is the fastest growing and most exciting dynamic language\r\n        out there. If you need to get working programs delivered fast,\r\n        you should add Ruby to your toolbox.\r\n      </p>", "image_url"=>"/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg", "price"=>"49.5"}, "commit"=>"Update Product", "id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.5ms)[0m  UPDATE "products" SET "description" = '<p>
+ Ruby is the fastest growing and most exciting dynamic language
+ out there. If you need to get working programs delivered fast,
+ you should add Ruby to your toolbox.
+ </p>', "image_url" = '/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg', "updated_at" = '2011-10-11 04:36:22.846676' WHERE "products"."id" = 3
+Redirected to http://localhost:3000/products/3
+Completed 302 Found in 176ms
+
+
+Started GET "/products/3" for 127.0.0.1 at 2011-10-10 22:36:23 -0600
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Rendered products/show.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 62ms (Views: 53.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:36:23 -0600
+Served asset /all.css - 404 Not Found (84ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:36:23 -0600
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-10-10 22:38:35 -0600
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (19.3ms)[0m  SELECT "products".* FROM "products" 
+Rendered products/index.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 158ms (Views: 133.0ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:38:36 -0600
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.0ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:38:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:38:36 -0600
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:38:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (23.3ms)
+
+
+Started GET "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg" for 127.0.0.1 at 2011-10-10 22:38:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2011-10-10 22:38:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.5ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2011-10-10 22:38:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg" for 127.0.0.1 at 2011-10-10 22:38:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (17.7ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2011-10-10 22:38:55 -0600
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Rendered products/show.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 70ms (Views: 64.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:38:55 -0600
+Served asset /all.css - 404 Not Found (34ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:38:55 -0600
+Served asset /defaults.js - 404 Not Found (20ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-10-10 22:47:46 -0600
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (521.6ms)
+Completed 200 OK in 709ms (Views: 706.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:47:50 -0600
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (14.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:47:50 -0600
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (43.0ms)
+
+
+Started GET "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg" for 127.0.0.1 at 2011-10-10 22:47:50 -0600
+
+ActionController::RoutingError (No route matches [GET] "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg" for 127.0.0.1 at 2011-10-10 22:47:51 -0600
+
+ActionController::RoutingError (No route matches [GET] "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2011-10-10 22:48:37 -0600
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered products/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 108ms (Views: 102.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:48:38 -0600
+Served asset /all.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:48:38 -0600
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-10-10 22:50:19 -0600
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-10-10 22:50:20 -0600
+Served asset /all.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg" for 127.0.0.1 at 2011-10-10 22:50:20 -0600
+
+ActionController::RoutingError (No route matches [GET] "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-10 22:50:20 -0600
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg" for 127.0.0.1 at 2011-10-10 22:50:20 -0600
+
+ActionController::RoutingError (No route matches [GET] "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-10 12:30:17 -0700
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (331.5ms)
+Completed 200 OK in 571ms (Views: 569.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-10 12:30:21 -0700
+Served asset /all.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-10 12:30:21 -0700
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg" for 127.0.0.1 at 2011-11-10 12:30:21 -0700
+
+ActionController::RoutingError (No route matches [GET] "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg" for 127.0.0.1 at 2011-11-10 12:30:21 -0700
+
+ActionController::RoutingError (No route matches [GET] "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-10 14:47:55 -0700
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (529.1ms)
+Completed 200 OK in 724ms (Views: 722.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-10 14:47:59 -0700
+Served asset /all.css - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg" for 127.0.0.1 at 2011-11-10 14:48:00 -0700
+
+ActionController::RoutingError (No route matches [GET] "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-10 14:48:00 -0700
+Served asset /defaults.js - 404 Not Found (42ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg" for 127.0.0.1 at 2011-11-10 14:48:00 -0700
+
+ActionController::RoutingError (No route matches [GET] "/anu/Documents/my_rails/Depot/my_depot/images/rails.jpg"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (9.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111011031452)
+  [1m[35m (4.5ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (105.5ms)[0m  DELETE FROM "products"
+  [1m[36mSQL (217.2ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 10 Nov 2011 21:55:10 UTC +00:00], ["description", "<p>\n        <em>Web Design for Developers</em> will show you how to make your\n        web-based application look professionally designed. We'll help you\n        learn how to pick the right colors and fonts, avoid costly interface\n        and accessibility mistakes -- your application will really come alive.\n        We'll also walk you through some common Photoshop and CSS techniques\n        and work through a web site redesign, taking a new design from concept\n        all the way to implementation.\n      </p>"], ["image_url", "/images/wd4d.jpg"], ["price", #<BigDecimal:1cb5b00,'0.4295E2',18(18)>], ["title", "Web Design for Developers"], ["updated_at", Thu, 10 Nov 2011 21:55:10 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Thu, 10 Nov 2011 21:55:10 UTC +00:00], ["description", "<p>\n        Ruby is the fastest growing and most exciting dynamic language\n        out there. If you need to get working programs delivered fast,\n        you should add Ruby to your toolbox.\n      </p>"], ["image_url", "/images/ruby.jpg"], ["price", #<BigDecimal:340c178,'0.495E2',18(18)>], ["title", "Programming Ruby 1.9"], ["updated_at", Thu, 10 Nov 2011 21:55:10 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 10 Nov 2011 21:55:10 UTC +00:00], ["description", "<p>\n        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing\n        Rails applications, covering Test-Driven Development from both a\n        theoretical perspective (why to test) and from a practical perspective\n        (how to test effectively). It covers the core Rails testing tools and\n        procedures for Rails 2 and Rails 3, and introduces popular add-ons,\n        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.\n      </p>"], ["image_url", "/images/rtp.jpg"], ["price", #<BigDecimal:33aab30,'0.4375E2',18(18)>], ["title", "Rails Test Prescriptions"], ["updated_at", Thu, 10 Nov 2011 21:55:10 UTC +00:00]]
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-15 09:54:26 -0700
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (416.1ms)
+Completed 200 OK in 699ms (Views: 690.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 09:54:29 -0700
+Served asset /all.css - 404 Not Found (14ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 09:54:29 -0700
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111011031452)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (122.7ms)[0m  DELETE FROM "products"
+  [1m[36mSQL (98.1ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 15 Nov 2011 17:05:52 UTC +00:00], ["description", "<p>\n        <em>Web Design for Developers</em> will show you how to make your\n        web-based application look professionally designed. We'll help you\n        learn how to pick the right colors and fonts, avoid costly interface\n        and accessibility mistakes -- your application will really come alive.\n        We'll also walk you through some common Photoshop and CSS techniques\n        and work through a web site redesign, taking a new design from concept\n        all the way to implementation.\n      </p>"], ["image_url", "/images/wd4d.jpg"], ["price", #<BigDecimal:2524660,'0.4295E2',18(18)>], ["title", "Web Design for Developers"], ["updated_at", Tue, 15 Nov 2011 17:05:52 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 15 Nov 2011 17:05:52 UTC +00:00], ["description", "<p>\n        Ruby is the fastest growing and most exciting dynamic language\n        out there. If you need to get working programs delivered fast,\n        you should add Ruby to your toolbox.\n      </p>"], ["image_url", "/images/ruby.jpg"], ["price", #<BigDecimal:326f130,'0.495E2',18(18)>], ["title", "Programming Ruby 1.9"], ["updated_at", Tue, 15 Nov 2011 17:05:52 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 15 Nov 2011 17:05:52 UTC +00:00], ["description", "<p>\n        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing\n        Rails applications, covering Test-Driven Development from both a\n        theoretical perspective (why to test) and from a practical perspective\n        (how to test effectively). It covers the core Rails testing tools and\n        procedures for Rails 2 and Rails 3, and introduces popular add-ons,\n        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.\n      </p>"], ["image_url", "/images/rtp.jpg"], ["price", #<BigDecimal:324fe48,'0.4375E2',18(18)>], ["title", "Rails Test Prescriptions"], ["updated_at", Tue, 15 Nov 2011 17:05:52 UTC +00:00]]
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-15 10:06:23 -0700
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (510.2ms)
+Completed 200 OK in 642ms (Views: 634.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:06:26 -0700
+Served asset /all.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:06:26 -0700
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-15 10:11:37 -0700
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" 
+Rendered products/index.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 79ms (Views: 75.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:11:37 -0700
+Served asset /all.css - 404 Not Found (16ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:11:37 -0700
+Served asset /defaults.js - 404 Not Found (37ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-15 10:11:40 -0700
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (116.3ms)
+Completed 200 OK in 137ms (Views: 135.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:11:40 -0700
+Served asset /all.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:11:40 -0700
+Served asset /defaults.js - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/products/8" for 127.0.0.1 at 2011-11-15 10:11:59 -0700
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "8"]]
+Rendered products/show.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 63ms (Views: 54.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:11:59 -0700
+Served asset /all.css - 404 Not Found (14ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:11:59 -0700
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111011031452)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (87.5ms)[0m  DELETE FROM "products"
+  [1m[36mSQL (59.7ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 15 Nov 2011 17:17:27 UTC +00:00], ["description", "<p>\n        <em>Web Design for Developers</em> will show you how to make your\n        web-based application look professionally designed. We'll help you\n        learn how to pick the right colors and fonts, avoid costly interface\n        and accessibility mistakes -- your application will really come alive.\n        We'll also walk you through some common Photoshop and CSS techniques\n        and work through a web site redesign, taking a new design from concept\n        all the way to implementation.\n      </p>"], ["image_url", "/images/wd4d.jpg"], ["price", #<BigDecimal:2afa2d8,'0.4295E2',18(18)>], ["title", "Web Design for Developers"], ["updated_at", Tue, 15 Nov 2011 17:17:27 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 15 Nov 2011 17:17:27 UTC +00:00], ["description", "<p>\n        Ruby is the fastest growing and most exciting dynamic language\n        out there. If you need to get working programs delivered fast,\n        you should add Ruby to your toolbox.\n      </p>"], ["image_url", "/images/ruby.jpg"], ["price", #<BigDecimal:3a4f0f8,'0.495E2',18(18)>], ["title", "Programming Ruby 1.9"], ["updated_at", Tue, 15 Nov 2011 17:17:27 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 15 Nov 2011 17:17:27 UTC +00:00], ["description", "<p>\n        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing\n        Rails applications, covering Test-Driven Development from both a\n        theoretical perspective (why to test) and from a practical perspective\n        (how to test effectively). It covers the core Rails testing tools and\n        procedures for Rails 2 and Rails 3, and introduces popular add-ons,\n        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.\n      </p>"], ["image_url", "/images/rtp.jpg"], ["price", #<BigDecimal:39da820,'0.4375E2',18(18)>], ["title", "Rails Test Prescriptions"], ["updated_at", Tue, 15 Nov 2011 17:17:27 UTC +00:00]]
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-15 10:17:48 -0700
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (347.4ms)
+Completed 200 OK in 540ms (Views: 537.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:17:52 -0700
+Served asset /all.css - 404 Not Found (16ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:17:52 -0700
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-11-15 10:18:16 -0700
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (11.6ms)
+Rendered products/new.html.erb within layouts/application (59.3ms)
+Completed 200 OK in 71ms (Views: 69.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:18:16 -0700
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:18:16 -0700
+Served asset /defaults.js - 404 Not Found (13ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-15 10:18:19 -0700
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Rendered products/index.html.erb within layouts/application (92.4ms)
+Completed 200 OK in 116ms (Views: 111.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:18:19 -0700
+Served asset /defaults.js - 404 Not Found (37ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (13.6ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:18:19 -0700
+Served asset /all.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/products/11" for 127.0.0.1 at 2011-11-15 10:26:25 -0700
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "11"]]
+Rendered products/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 37ms (Views: 31.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:26:26 -0700
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:26:26 -0700
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-15 10:26:40 -0700
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Rendered products/index.html.erb within layouts/application (70.2ms)
+Completed 200 OK in 123ms (Views: 109.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:26:40 -0700
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:26:40 -0700
+Served asset /all.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (86.8ms)[0m  DELETE FROM "products"
+  [1m[36mSQL (76.8ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 15 Nov 2011 17:29:32 UTC +00:00], ["description", "<p>\n        <em>Web Design for Developers</em> will show you how to make your\n        web-based application look professionally designed. We'll help you\n        learn how to pick the right colors and fonts, avoid costly interface\n        and accessibility mistakes -- your application will really come alive.\n        We'll also walk you through some common Photoshop and CSS techniques\n        and work through a web site redesign, taking a new design from concept\n        all the way to implementation.\n      </p>"], ["image_url", "/images/wd4d.jpg"], ["price", #<BigDecimal:3092308,'0.4295E2',18(18)>], ["title", "Web Design for Developers"], ["updated_at", Tue, 15 Nov 2011 17:29:32 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 15 Nov 2011 17:29:33 UTC +00:00], ["description", "<p>\n        Ruby is the fastest growing and most exciting dynamic language\n        out there. If you need to get working programs delivered fast,\n        you should add Ruby to your toolbox.\n      </p>"], ["image_url", "/images/ruby.jpg"], ["price", #<BigDecimal:3f69b10,'0.495E2',18(18)>], ["title", "Programming Ruby 1.9"], ["updated_at", Tue, 15 Nov 2011 17:29:33 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 15 Nov 2011 17:29:33 UTC +00:00], ["description", "<p>\n        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing\n        Rails applications, covering Test-Driven Development from both a\n        theoretical perspective (why to test) and from a practical perspective\n        (how to test effectively). It covers the core Rails testing tools and\n        procedures for Rails 2 and Rails 3, and introduces popular add-ons,\n        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.\n      </p>"], ["image_url", "/images/rtp.jpg"], ["price", #<BigDecimal:3f48a00,'0.4375E2',18(18)>], ["title", "Rails Test Prescriptions"], ["updated_at", Tue, 15 Nov 2011 17:29:33 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20111011031452)
+  [1m[35m (3.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-15 10:30:09 -0700
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (698.0ms)
+Completed 200 OK in 901ms (Views: 899.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:30:12 -0700
+Served asset /all.css - 404 Not Found (25ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:30:12 -0700
+Served asset /defaults.js - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-15 10:50:15 -0700
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (472.9ms)
+Completed 200 OK in 696ms (Views: 680.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:50:18 -0700
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:50:19 -0700
+Served asset /defaults.js - 404 Not Found (17ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/products/14" for 127.0.0.1 at 2011-11-15 10:50:34 -0700
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "14"]]
+Rendered products/show.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 67ms (Views: 47.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 10:50:34 -0700
+Served asset /all.css - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 10:50:34 -0700
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-11-15 17:18:03 -0700
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (8.9ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Rendered products/index.html.erb within layouts/application (551.6ms)
+Completed 200 OK in 885ms (Views: 874.1ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 17:18:07 -0700
+Served asset /all.css - 404 Not Found (30ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 17:18:07 -0700
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/products/14" for 127.0.0.1 at 2011-11-15 17:41:42 -0700
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "14"]]
+Rendered products/show.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 74ms (Views: 44.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-11-15 17:41:43 -0700
+Served asset /all.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-11-15 17:41:43 -0700
+Served asset /defaults.js - 404 Not Found (21ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/anu/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)

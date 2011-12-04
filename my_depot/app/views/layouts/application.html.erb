@@ -13,13 +13,12 @@
 </div>
 <div id="columns">
 <div id="side">
-<div id ="cart"
-  <% if @cart.line_items.empty? %>
-          style="display: none"
+  <% if @cart %>
+        <%= hidden_div_if(@cart.line_items.empty?, :id => 'cart') do %>
+          <%= render @cart %>
 <% end %>
->
-<%= render @cart %>
-</div>
+<% end %>
+
 
 <ul>
 <li><a href="http://www.....">Home</a></li>
@@ -27,6 +26,15 @@
 <li><a href="http://www...../news">News</a></li>
 <li><a href="http://www...../cotact">Contact</a></li>
 </ul>
+
+<% if session[:user_id] %>
+<ul>
+<li><%= link_to 'Orders', orders_path %></li>
+<li><%= link_to 'Products', products_path %></li>
+<li><%= link_to 'Users', users_path %></li>
+</ul>
+<%= button_to 'Logout', logout_path, method: :delete %>
+<% end %>
 </div>
 <div id="main">
 
